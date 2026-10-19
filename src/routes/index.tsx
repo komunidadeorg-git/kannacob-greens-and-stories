@@ -120,19 +120,19 @@ const solutions = [
   ["Saúde e bem estar", "Nossas parcerias com médicos e empresas que oferecem produtos e serviços a um preço justo é exclusiva para membros da nossa plataforma."],
   ["Consultoria e Investimentos", "Esteja antenado aos movimentos do mercado, opções de investimentos e conheça nossos parceiros em primeira mão. Amplie sua possibilidade de investimento e de parcerias com a gente."],
   ["Sustentabilidade", "Faça parte do projeto “Adote uma árvore” e saiba mais sobre o Programa de Carbono Zero."],
-];
+] as const;
 
 const green = [
   ["Adote uma árvore", "Toda área da Fazenda Santa Rosa que não for utilizada para produção de Cannabis ou moradia, será reflorestada em nosso Programa de Reflorestamento. Você pode fazer parte dele adotando uma árvore, acompanhando seu crescimento e tornando-se uma pessoa carbono zero.", "https://kannacobcommunity.circle.so/c/sponsor-a-tree/"],
   ["Implementação ESG", "As parcerias entre empresas e universidades uruguaias e brasileiras, vão mostrar o caminho de implementação de práticas ESG e ajudar a entender como o cultivo, a extração e produção da Cannabis podem ser totalmente sustentáveis.", "https://kannacob.com.br/kannacob-facaparte"],
   ["Projeto Carbono Zero", "Plantações de Cannabis possuem um imenso potencial de retenção de gases no efeito estufa, sendo ainda mais potentes que florestas tropicais. 1 hectare pode reter até 20 toneladas de carbono por ano. Em média, cada hectare de soja emite até 9 toneladas de CO2 por ano.", "https://kannacobcommunity.circle.so/c/co2-foot-print/"],
-];
+] as const;
 
 const partners = [
   ["🇺🇾", "GERMINARE", "Cultivo de THC e CBD Medicinal e Industrial. Flores e Concentrados", "logos-partners-01.png"],
   ["🇺🇾", "KANNAMED", "Medicamentos e Cosméticos", "logo-kannamed2-1.png.webp"],
   ["🇨🇦", "TEN-TEN", "Cultivo de THC Medicinal. Flores e Comestíveis", "logos-partners-04.png.webp"],
-];
+] as const;
 
 function Index() {
   const [s, setS] = useState(0);
@@ -228,10 +228,10 @@ function Index() {
                 <button key={x.t} onClick={() => setS(i)} className={`rounded-full px-4 py-2 text-sm font-bold ${i === s ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>{x.t}</button>
               ))}
             </div>
-            <h4 className="text-2xl font-extrabold">{slides[s].t}</h4>
-            <p className="mt-3 text-muted-foreground">{slides[s].d}</p>
+            <h4 className="text-2xl font-extrabold">{slides[s]!.t}</h4>
+            <p className="mt-3 text-muted-foreground">{slides[s]!.d}</p>
           </div>
-          <img src={img(slides[s].i)} alt={slides[s].t} className="aspect-[4/3] w-full rounded-xl object-cover" />
+          <img src={img(slides[s]!.i)} alt={slides[s]!.t} className="aspect-[4/3] w-full rounded-xl object-cover" />
         </div>
       </section>
 
